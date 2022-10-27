@@ -1,6 +1,7 @@
 import 'package:eshop/widgets_common/appLogo.dart';
 import 'package:eshop/widgets_common/bg_widget.dart';
 import 'package:eshop/widgets_common/customtextfields.dart';
+import 'package:eshop/widgets_common/redbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:eshop/content/consts.dart';
 
@@ -9,25 +10,82 @@ class loginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return bgWidget(
-      Scaffold(
-        body: Center(
-          child: Column(
-            children: [
-              (context.screenHeight * 0.1).heightBox,
-              appLogoImage(),
-              10.heightBox,
-              "Log in to $appname".text.fontFamily(bold).size(18).white.make(),
-              10.heightBox,
-              Column(
-                children: [
-                  customTextField(fieldName: email, fieldNameHint: emailHint),
-                  customTextField(fieldName: password, fieldNameHint: passwordHint),
-                ],
-              ).box.white.padding(EdgeInsets.all(16)).width(context.screenWidth - 70).rounded.make(),
-            ],
-          ),
+    return bgWidget(Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Center(
+        child: Column(
+          children: [
+            (context.screenHeight * 0.1).heightBox,
+            appLogoImage(),
+            15.heightBox,
+            "Log in to $appname".text.fontFamily(bold).size(18).white.make(),
+            10.heightBox,
+            Column(
+              children: [
+                customTextField(fieldName: email, fieldNameHint: emailHint),
+                customTextField(
+                    fieldName: password, fieldNameHint: passwordHint),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                      onPressed: () {}, child: forgetpass.text.make()),
+                ),
+                5.heightBox,
+                redButton(
+                  onPress: () {},
+                  color: redColor,
+                  textcolor: whiteColor,
+                  varname: login,
+                ).box.width(context.screenWidth - 50).make(),
+                5.heightBox,
+                Align(
+                  alignment: Alignment.center,
+                  child: TextButton(
+                      onPressed: () {},
+                      child: createnew.text
+                          .fontFamily(regular)
+                          .color(fontGrey)
+                          .size(12)
+                          .make()),
+                ),
+                10.heightBox,
+                Align(
+                  alignment: Alignment.center,
+                  child: TextButton(
+                      onPressed: () {},
+                      child: loginWith.text
+                          .fontFamily(bold)
+                          .color(Colors.black)
+                          .size(13)
+                          .make()),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                      3,
+                      (index) => Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: CircleAvatar(
+                            backgroundColor: lightGrey,
+                            radius: 25,
+                            child: Image.asset(
+                              socialIconList[index],
+                              width: 30,
+                            ),
+                          ))),
+                )
+              ],
+            )
+                .box
+                .white
+                .padding(EdgeInsets.all(16))
+                .width(context.screenWidth - 70)
+                .rounded
+                .shadowMd
+                .make(),
+          ],
         ),
+      ),
     ));
   }
 }
