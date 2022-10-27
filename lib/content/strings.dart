@@ -1,2 +1,16 @@
 const appname = "Corner Shop";
 const appversion = "Version 1.0.0";
+const email = "E-mail";
+const emailHint = "xyz@example.com";
+const password = "Password";
+const passwordHint = "******";
+const forgetpass = "Forget password";
+const login = "Log in";
+const signup = "Sign up";
+const createnew = "Create a new account";
+const loginWith = "Login with";
+const name = "Name";
+const retypePass = "Re-type password";
+const privacyTerms = "Privacy policies.";
+const terms = " Terms and Conditions ";
+const alreadyAccount = "Already have an account? ";

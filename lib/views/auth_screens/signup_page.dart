@@ -4,6 +4,7 @@ import 'package:eshop/widgets_common/customtextfields.dart';
 import 'package:eshop/widgets_common/redbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:eshop/content/consts.dart';
+import 'package:get/get.dart';
 
 class signUpPage extends StatelessWidget {
   const signUpPage({super.key});
@@ -18,63 +19,86 @@ class signUpPage extends StatelessWidget {
             (context.screenHeight * 0.1).heightBox,
             appLogoImage(),
             10.heightBox,
-            "Welcome to $appname !!".text.fontFamily(bold).size(18).white.make(),
-            15 .heightBox,
+            "Welcome to $appname !!"
+                .text
+                .fontFamily(bold)
+                .size(18)
+                .white
+                .make(),
+            15.heightBox,
             Column(
               children: [
                 customTextField(fieldName: name),
                 customTextField(fieldName: email),
                 customTextField(fieldName: password),
                 customTextField(fieldName: retypePass),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                      onPressed: () {}, child: forgetpass.text.make()),
+                5.heightBox,
+                Row(
+                  children: [
+                    Checkbox(
+                        value: false,
+                        checkColor: redColor,
+                        onChanged: (newValue) {
+                          value: newValue;
+                        }),
+                    Expanded(
+                      child: RichText(
+                          text: const TextSpan(children: [
+                        TextSpan(
+                            text: "I agrees to the",
+                            style: TextStyle(
+                              color: fontGrey,
+                              fontFamily: bold,
+                            )),
+                        TextSpan(
+                            text: terms,
+                            style: TextStyle(
+                              color: redColor,
+                              fontFamily: bold,
+                            )),
+                        TextSpan(
+                            text: "& ",
+                            style: TextStyle(
+                              color: fontGrey,
+                              fontFamily: bold,
+                            )),
+                        TextSpan(
+                            text: privacyTerms,
+                            style: TextStyle(
+                              color: redColor,
+                              fontFamily: bold,
+                            ))
+                      ])),
+                    )
+                  ],
                 ),
                 5.heightBox,
                 redButton(
                   onPress: () {},
                   color: redColor,
                   textcolor: whiteColor,
-                  varname: login,
+                  varname: signup,
                 ).box.width(context.screenWidth - 50).make(),
-                5.heightBox,
-                Align(
-                  alignment: Alignment.center,
-                  child: TextButton(
-                      onPressed: () {},
-                      child: createnew.text
-                          .fontFamily(regular)
-                          .color(fontGrey)
-                          .size(12)
-                          .make()),
-                ),
-                10.heightBox,
-                Align(
-                  alignment: Alignment.center,
-                  child: TextButton(
-                      onPressed: () {},
-                      child: loginWith.text
-                          .fontFamily(bold)
-                          .color(Colors.black)
-                          .size(13)
-                          .make()),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(
-                      3,
-                      (index) => Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: CircleAvatar(
-                            backgroundColor: lightGrey,
-                            radius: 25,
-                            child: Image.asset(
-                              socialIconList[index],
-                              width: 30,
-                            ),
-                          ))),
-                )
+                20.heightBox,
+                RichText(
+                    text: const TextSpan(
+                  children: [
+                    TextSpan(
+                        text: alreadyAccount,
+                        style: TextStyle(
+                          fontFamily: bold,
+                          color: fontGrey,
+                        )),
+                    TextSpan(
+                        text: login,
+                        style: TextStyle(
+                          fontFamily: bold,
+                          color: redColor,
+                        )),
+                  ],
+                )).onTap(() {
+                  Get.back();
+                })
               ],
             )
                 .box
