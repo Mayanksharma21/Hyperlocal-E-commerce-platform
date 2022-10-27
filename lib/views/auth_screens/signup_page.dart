@@ -1,14 +1,12 @@
-import 'package:eshop/views/auth_screens/signup_page.dart';
 import 'package:eshop/widgets_common/appLogo.dart';
 import 'package:eshop/widgets_common/bg_widget.dart';
 import 'package:eshop/widgets_common/customtextfields.dart';
 import 'package:eshop/widgets_common/redbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:eshop/content/consts.dart';
-import 'package:get/get.dart';
 
-class loginPage extends StatelessWidget {
-  const loginPage({super.key});
+class signUpPage extends StatelessWidget {
+  const signUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +18,14 @@ class loginPage extends StatelessWidget {
             (context.screenHeight * 0.1).heightBox,
             appLogoImage(),
             10.heightBox,
-            "Log in to $appname".text.fontFamily(bold).size(18).white.make(),
-            15.heightBox,
+            "Welcome to $appname !!".text.fontFamily(bold).size(18).white.make(),
+            15 .heightBox,
             Column(
               children: [
-                customTextField(fieldName: email, fieldNameHint: emailHint),
-                customTextField(
-                    fieldName: password, fieldNameHint: passwordHint),
+                customTextField(fieldName: name),
+                customTextField(fieldName: email),
+                customTextField(fieldName: password),
+                customTextField(fieldName: retypePass),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
@@ -43,9 +42,7 @@ class loginPage extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: TextButton(
-                      onPressed: () {
-                        Get.to(() => signUpPage());
-                      },
+                      onPressed: () {},
                       child: createnew.text
                           .fontFamily(regular)
                           .color(fontGrey)

@@ -10,3 +10,5 @@ const login = "Log in";
 const signup = "Sign up";
 const createnew = "Create a new account";
 const loginWith = "Login with";
+const name = "Name";
+const retypePass = "Retype password";
