@@ -1,3 +1,5 @@
+import 'package:eshop/views/Home_screens/Home.dart';
+import 'package:eshop/views/auth_screens/login_page.dart';
 import 'package:eshop/widgets_common/appLogo.dart';
 import 'package:eshop/widgets_common/bg_widget.dart';
 import 'package:eshop/widgets_common/customtextfields.dart';
@@ -6,8 +8,15 @@ import 'package:flutter/material.dart';
 import 'package:eshop/content/consts.dart';
 import 'package:get/get.dart';
 
-class signUpPage extends StatelessWidget {
+class signUpPage extends StatefulWidget {
   const signUpPage({super.key});
+
+  @override
+  State<signUpPage> createState() => _signUpPageState();
+}
+
+class _signUpPageState extends State<signUpPage> {
+  bool? isCheck = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +45,13 @@ class signUpPage extends StatelessWidget {
                 Row(
                   children: [
                     Checkbox(
-                        value: false,
-                        checkColor: redColor,
+                        value: isCheck,
+                        activeColor: redColor,
+                        checkColor: whiteColor,
                         onChanged: (newValue) {
-                          value: newValue;
+                          setState(() {
+                            isCheck = newValue;
+                          });
                         }),
                     Expanded(
                       child: RichText(
@@ -48,7 +60,7 @@ class signUpPage extends StatelessWidget {
                             text: "I agrees to the",
                             style: TextStyle(
                               color: fontGrey,
-                              fontFamily: bold,
+                              fontFamily: regular,
                             )),
                         TextSpan(
                             text: terms,
@@ -60,7 +72,7 @@ class signUpPage extends StatelessWidget {
                             text: "& ",
                             style: TextStyle(
                               color: fontGrey,
-                              fontFamily: bold,
+                              fontFamily: regular,
                             )),
                         TextSpan(
                             text: privacyTerms,
@@ -74,8 +86,10 @@ class signUpPage extends StatelessWidget {
                 ),
                 5.heightBox,
                 redButton(
-                  onPress: () {},
-                  color: redColor,
+                  // onPress: () {
+                  //   Get.to(() => homeScreen());
+                  // },
+                  color: isCheck == true ? redColor : lightGrey,
                   textcolor: whiteColor,
                   varname: signup,
                 ).box.width(context.screenWidth - 50).make(),
@@ -97,7 +111,7 @@ class signUpPage extends StatelessWidget {
                         )),
                   ],
                 )).onTap(() {
-                  Get.back();
+                  Get.to(() => loginPage());
                 })
               ],
             )

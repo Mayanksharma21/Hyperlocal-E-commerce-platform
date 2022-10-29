@@ -1,3 +1,4 @@
+import '../Home_screens/Home.dart';
 import 'package:eshop/views/auth_screens/signup_page.dart';
 import 'package:eshop/widgets_common/appLogo.dart';
 import 'package:eshop/widgets_common/bg_widget.dart';
@@ -24,9 +25,8 @@ class loginPage extends StatelessWidget {
             15.heightBox,
             Column(
               children: [
-                customTextField(fieldName: email, fieldNameHint: emailHint),
-                customTextField(
-                    fieldName: password, fieldNameHint: passwordHint),
+                customTextField(fieldName: email),
+                customTextField(fieldName: password),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
@@ -34,7 +34,6 @@ class loginPage extends StatelessWidget {
                 ),
                 5.heightBox,
                 redButton(
-                  onPress: () {},
                   color: redColor,
                   textcolor: whiteColor,
                   varname: login,
@@ -55,13 +54,11 @@ class loginPage extends StatelessWidget {
                 10.heightBox,
                 Align(
                   alignment: Alignment.center,
-                  child: TextButton(
-                      onPressed: () {},
-                      child: loginWith.text
-                          .fontFamily(bold)
-                          .color(Colors.black)
-                          .size(13)
-                          .make()),
+                  child: loginWith.text
+                      .fontFamily(bold)
+                      .color(Colors.black)
+                      .size(13)
+                      .make(),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
