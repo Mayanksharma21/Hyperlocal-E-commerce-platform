@@ -11,3 +11,28 @@ const secondFeaturedImagesList = [imgS4, imgS5, imgS6];
 
 const feturedTitleList = [womenDress, girlDress, girlWatches];
 const scondFeturedTitleList = [boyGlasses, tshirt, mobilePhones];
+
+const categoriesList = [
+  womenClothing,
+  menClothingFashin,
+  computerAcces,
+  automobile,
+  kidToys,
+  sports,
+  beauty,
+  cellPhone,
+  furniture
+];
+const cetegoriesImagesList = [
+  imgFcWomen,
+  imgFc1,
+  imgFc2,
+  imgFc3,
+  imgFc4,
+  imgFc5,
+  imgFc7,
+  imgPi4,
+  imgFc9
+];
+
+const itemDetailsList = [video, reviews, sellerPolicy, returnPolicy, support];

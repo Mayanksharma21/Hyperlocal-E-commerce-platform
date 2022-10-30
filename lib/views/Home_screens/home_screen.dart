@@ -1,7 +1,10 @@
+import 'package:eshop/views/Category_Screen/item_details.dart';
 import 'package:eshop/views/Home_screens/Components/featured_components.dart';
 import 'package:eshop/widgets_common/home_Buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:eshop/content/consts.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -199,7 +202,7 @@ class HomeScreen extends StatelessWidget {
                                                 horizontal: 4))
                                             .padding(const EdgeInsets.all(8))
                                             .make())),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -248,7 +251,7 @@ class HomeScreen extends StatelessWidget {
                                 width: 150,
                                 fit: BoxFit.cover,
                               ),
-                              10.heightBox,
+                              const Spacer(),
                               "Apple iPhone 13(128GB)"
                                   .text
                                   .fontFamily(semibold)
@@ -262,7 +265,17 @@ class HomeScreen extends StatelessWidget {
                                   .fontFamily(bold)
                                   .make(),
                             ],
-                          ).box.white.roundedSM.make();
+                          )
+                              .box
+                              .white
+                              .margin(const EdgeInsets.symmetric(horizontal: 4))
+                              .roundedSM
+                              .padding(const EdgeInsets.all(12))
+                              .make()
+                              .onTap(() {
+                            Get.to(() => const itemDetails(
+                                title: "Apple iPhone 13(128GB)"));
+                          });
                         }))
                   ],
                 ),
