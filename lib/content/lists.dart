@@ -36,3 +36,6 @@ const cetegoriesImagesList = [
 ];
 
 const itemDetailsList = [video, reviews, sellerPolicy, returnPolicy, support];
+
+const profileItemList = [orders, wishlist, messages];
+const profileItemIconsList = [icOrders, icOrder, icMessages];

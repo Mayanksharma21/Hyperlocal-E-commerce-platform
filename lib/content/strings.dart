@@ -47,3 +47,5 @@ const video = "Video",
     returnPolicy = "Return Policy",
     support = "Support",
     productYoumay = "Products you may also like";
+
+const wishlist = "My wishlist", orders = "My Orders", messages = "Mesaages";
