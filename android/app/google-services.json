@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "575591015343",
+    "project_id": "cornershop-b2700",
+    "storage_bucket": "cornershop-b2700.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575591015343:android:576c6ba296ce6c14cd855a",
+        "android_client_info": {
+          "package_name": "com.example.eshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575591015343-s5nd65613t1n9coe5o17uimossiioohj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eshop",
+            "certificate_hash": "138e93ba638472f0f40078b97e34c126ac0982dd"
+          }
+        },
+        {
+          "client_id": "575591015343-m0ia3jap7bpp3jilu4ri5q8pql14u8i9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFYU-19RF_4nc9-pg_MjjPD_waZT2u02Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575591015343-m0ia3jap7bpp3jilu4ri5q8pql14u8i9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
