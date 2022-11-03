@@ -49,3 +49,6 @@ const video = "Video",
     productYoumay = "Products you may also like";
 
 const wishlist = "My wishlist", orders = "My Orders", messages = "Mesaages";
+
+const loginSuccefully = "Logged in Succefully";
+const logOutSuccefully = "Logged out Succefully";
