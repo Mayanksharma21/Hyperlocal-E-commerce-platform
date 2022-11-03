@@ -1,5 +1,6 @@
 const appname = "Corner Shop";
 const appversion = "Version 1.0.0";
+const Credit = "Mayank Sharma";
 const email = "E-mail";
 const emailHint = "xyz@example.com";
 const password = "Password";
