@@ -1,5 +1,5 @@
-# E-Commerece-App-UI-using-Flutter
-This is a Flutter project which I've made on the theme of E-Commerece App.
+# Hyperlocal E-commerce platform
+This hyperlocal E-commerce system helps the customers to connect with local stores of particular geographical regions.
 
 ## Packages used
 - [velocity_X](https://pub.dev/packages/velocity_x)
